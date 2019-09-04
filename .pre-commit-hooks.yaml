@@ -1,0 +1,12 @@
+- id: shellcheck
+  name: Shellcheck Bash Linter
+  description: Performs linting on bash scripts
+  entry: scripts/shellcheck.sh
+  language: script
+- id: terraform-fmt
+  name: Terraform fmt
+  description: Rewrites all Terraform configuration files to a canonical format.
+  entry: scripts/terraform-fmt.sh
+  language: script
+  files: \.tf$
+  exclude: \.+.terraform\/.*$
