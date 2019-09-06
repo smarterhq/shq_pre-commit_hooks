@@ -8,5 +8,5 @@ set -e
 export PATH=$PATH:/usr/local/bin
 
 for file in "$@"; do
-  terraform fmt `dirname $file`
+  terraform fmt "$(dirname "$file")"
 done
