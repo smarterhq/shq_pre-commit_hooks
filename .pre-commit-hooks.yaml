@@ -10,12 +10,11 @@
   language: script
   files: \.tf$
   exclude: \.+.terraform\/.*$
-- id: dockerfilelint
-  name: Dockerfile Linter
-  entry: dockerfilelint
-  language: node
-  additional_dependencies: [dockerfilelint]
-  files: (\.dockerfile|Dockerfile)$
+- id: circleci-config-validate
+  name: CircleCI Config File Validation
+  entry: scripts/circleci-config-validate.sh
+  language: script
+  files: \.circleci\config.yml$
 - id: hadolint
   name: Hadolint Dockerfile Linter
   description: Dockerfile linter, validate inline bash, written in Haskell
