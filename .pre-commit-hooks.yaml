@@ -10,3 +10,9 @@
   language: script
   files: \.tf$
   exclude: \.+.terraform\/.*$
+- id: dockerfilelint
+  name: Dockerfile Linter
+  entry: dockerfilelint
+  language: node
+  additional_dependencies: [dockerfilelint]
+  files: \Dockerfile$
