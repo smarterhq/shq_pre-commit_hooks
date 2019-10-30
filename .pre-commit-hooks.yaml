@@ -11,7 +11,7 @@
   files: \.tf$
   exclude: \.+.terraform\/.*$
 - id: circleci-config-validate
-  name: CircleCI Config File Validation
+  name: CircleCI Config Validation
   entry: scripts/circleci-config-validate.sh
   language: script
   files: config.yml
