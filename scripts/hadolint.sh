@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 set -e
 
@@ -7,11 +7,14 @@ set -e
 # workaround to allow GitHub Desktop to work, add this (hopefully harmless) setting here.
 export PATH=$PATH:/usr/local/bin
 
+exit_status=0
+
 if ! command -v hadolint; then
-    echo "terraform must be installed!"
-    exit 1
+    echo "hadolint must be installed!"
+    exit_status=1
 fi
 
-for file in "$@"; do
-  terraform fmt "$(dirname "$file")"
-done
+hadolint "$@"
+exit_status=$?
+
+exit $exit_status

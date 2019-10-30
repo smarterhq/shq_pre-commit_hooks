@@ -15,4 +15,16 @@
   entry: dockerfilelint
   language: node
   additional_dependencies: [dockerfilelint]
-  files: \Dockerfile$
+  files: (\.dockerfile|Dockerfile)$
+- id: hadolint
+  name: Hadolint
+  description: Dockerfile linter, validate inline bash, written in Haskell
+  entry: scripts/hadolint.sh
+  language: script
+  files: (\.dockerfile|Dockerfile)$
+- id: dockerfilelint
+  name: Dockerfile Linter
+  entry: dockerfilelint
+  language: node
+  additional_dependencies: [dockerfilelint]
+  files: (\.dockerfile|Dockerfile)$
