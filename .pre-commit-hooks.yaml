@@ -17,7 +17,7 @@
   additional_dependencies: [dockerfilelint]
   files: (\.dockerfile|Dockerfile)$
 - id: hadolint
-  name: Hadolint
+  name: Hadolint Dockerfile Linter
   description: Dockerfile linter, validate inline bash, written in Haskell
   entry: scripts/hadolint.sh
   language: script
