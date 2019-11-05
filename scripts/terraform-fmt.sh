@@ -8,7 +8,7 @@ set -e
 export PATH=$PATH:/usr/local/bin
 
 if ! command -v hadolint; then
-    echo "terraform must be installed!"
+    echo "hadolint & terraform must be installed!"
     exit 1
 fi
 
