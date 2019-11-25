@@ -12,6 +12,9 @@ export PATH=$PATH:/usr/local/bin
 
 exit_status=0
 
+# The following line is needed by the CircleCI Local Build Tool (due to Docker interactivity)
+exec < /dev/tty
+
 if ! command -v circleci; then
     echo "circleci must be installed!"
     exit_status=1
