@@ -48,3 +48,12 @@
   args:
     - check
     - rules
+- id: alertmanager-config-validate
+  stages: [commit]
+  name: AlertManager Config Validation
+  description: Validate AlertManager config files
+  language: docker_image
+  entry: --entrypoint /bin/amtool prom/alertmanager:latest
+  files: \.yml$
+  args:
+    - check-config
