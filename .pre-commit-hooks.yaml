@@ -15,7 +15,7 @@
   entry: scripts/circleci-config-validate.sh
   language: script
   files: config.yml
-  exclude: '^(?!.circleci/)'
+  exclude: "^(?!.circleci/)"
 - id: hadolint
   name: Hadolint Dockerfile Linter
   description: Dockerfile linter, validate inline bash, written in Haskell
@@ -28,3 +28,23 @@
   language: node
   additional_dependencies: [dockerfilelint]
   files: (\.dockerfile|Dockerfile)$
+- id: prometheus-check-config
+  stages: [commit]
+  name: Check prometheus config files
+  description: Check prometheus config files
+  language: docker_image
+  entry: --entrypoint /bin/promtool prom/prometheus:latest
+  files: \.yml$
+  args:
+    - check
+    - config
+- id: prometheus-check-rules
+  stages: [commit]
+  name: Check prometheus rule files
+  description: Check prometheus rule files
+  language: docker_image
+  entry: --entrypoint /bin/promtool prom/prometheus:latest
+  files: \.yml$
+  args:
+    - check
+    - rules
