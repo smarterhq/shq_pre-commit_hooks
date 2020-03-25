@@ -28,20 +28,20 @@
   language: node
   additional_dependencies: [dockerfilelint]
   files: (\.dockerfile|Dockerfile)$
-- id: prometheus-check-config
+- id: prometheus-config-validate
   stages: [commit]
-  name: Check prometheus config files
-  description: Check prometheus config files
+  name: Prometheus Config Validation
+  description: Validate Prometheus rule files
   language: docker_image
   entry: --entrypoint /bin/promtool prom/prometheus:latest
   files: \.yml$
   args:
     - check
     - config
-- id: prometheus-check-rules
+- id: prometheus-rules-validate
   stages: [commit]
-  name: Check prometheus rule files
-  description: Check prometheus rule files
+  name: Prometheus Rules Validation
+  description: Validate Prometheus rule files
   language: docker_image
   entry: --entrypoint /bin/promtool prom/prometheus:latest
   files: \.yml$
