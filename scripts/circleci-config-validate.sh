@@ -16,15 +16,21 @@ exit_status=0
 exec < /dev/tty
 
 if ! command -v circleci; then
-    echo "circleci must be installed!"
-    exit_status=1
+  echo "circleci must be installed!"
+  exit_status=1
+fi
+
+if [ -n "${CI}" ]; then
+  echo "Continuous Integration Detected! Exiting..."
+  exit_status=0
+  exit $exit_status
 fi
 
 # If validation fails, tell Git to stop and provide error message. Otherwise, continue.
 if ! error_message=$(circleci config validate -c "$@"); then
-	echo "CircleCI Configuration Failed Validation."
-	echo "$error_message"
-	exit_status=1
+  echo "CircleCI Configuration Failed Validation."
+  echo "$error_message"
+  exit_status=1
 fi
 
 exit $exit_status
