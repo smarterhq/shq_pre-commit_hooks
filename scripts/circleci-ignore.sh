@@ -33,5 +33,7 @@ if [[ ${#changes[@]} -gt 0 ]]; then
   exit 0
 fi
 
-# Prefix the commit message with "[skip ci]"
-sed -i '1s/^/[skip ci] /' "$1"
+#git_sha=$(git rev-parse --verify HEAD)
+
+## Prefix the commit message with "[skip ci]"
+#sed -i '1s/^/[skip ci] /' "$1"
