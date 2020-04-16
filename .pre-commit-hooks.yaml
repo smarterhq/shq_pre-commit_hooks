@@ -16,6 +16,11 @@
   language: script
   files: config.yml
   exclude: "^(?!.circleci/)"
+- id: circleci-ignore
+  name: CircleCI Ignore Files and Skip Build
+  entry: scripts/circleci-ignore.sh
+  language: script
+  exclude: "^(?.ciignore)"
 - id: hadolint
   name: Hadolint Dockerfile Linter
   description: Dockerfile linter, validate inline bash, written in Haskell
