@@ -2,9 +2,8 @@
   name: Stylelint CSS Linter
   entry: stylelint
   language: node
-  additional_dependencies: [stylelint]
+  additional_dependencies: [stylelint, stylelint-config-standard, stylelint-no-unsupported-browser-features, stylelint-order, stylelint-scss]
   files: \.(css|scss|sass)$
-  args: []
 - id: shellcheck
   name: Shellcheck Bash Linter
   description: Performs linting on bash scripts
