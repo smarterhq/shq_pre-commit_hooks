@@ -1,3 +1,9 @@
+- id: stylelint
+  name: stylelint
+  entry: stylelint
+  language: node
+  files: \.(css|scss|sass)$
+  args: []
 - id: shellcheck
   name: Shellcheck Bash Linter
   description: Performs linting on bash scripts
