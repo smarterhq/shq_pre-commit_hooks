@@ -1,5 +1,5 @@
 - id: stylelint
-  name: stylelint
+  name: Stylelint CSS Linter
   entry: stylelint
   language: node
   files: \.(css|scss|sass)$
