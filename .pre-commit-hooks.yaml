@@ -2,6 +2,7 @@
   name: Stylelint CSS Linter
   entry: stylelint
   language: node
+  additional_dependencies: [stylelint]
   files: \.(css|scss|sass)$
   args: []
 - id: shellcheck

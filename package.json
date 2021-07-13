@@ -1,4 +1,8 @@
 {
-  "name": "dummy_package",
-  "version": "0.0.0"
+  "name": "shq_pre-commit_hooks",
+  "version": "1.0.1",
+  "dependencies": {
+    "dockerfilelint": "^1.8.0",
+    "stylelint": "^13.13.1"
+  }
 }
