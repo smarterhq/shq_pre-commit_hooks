@@ -1,4 +1,14 @@
 {
-  "name": "dummy_package",
-  "version": "0.0.0"
+  "name": "shq_pre-commit_hooks",
+  "version": "1.0.1",
+  "dependencies": {
+    "dockerfilelint": "^1.8.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-no-unsupported-browser-features": "^5.0.1",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^3.19.0"
+  }
 }
