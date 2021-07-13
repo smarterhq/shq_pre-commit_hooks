@@ -2,7 +2,7 @@
   name: Stylelint CSS Linter
   entry: stylelint
   language: node
-  additional_dependencies: [stylelint, stylelint-config-prettier, stylelint-config-standard, stylelint-no-unsupported-browser-features, stylelint-order, stylelint-scss]
+  additional_dependencies: [stylelint, stylelint-config-prettier, stylelint-config-standard, stylelint-no-unsupported-browser-features, stylelint-order, stylelint-prettier, stylelint-scss]
   files: \.(css|scss|sass)$
 - id: shellcheck
   name: Shellcheck Bash Linter
